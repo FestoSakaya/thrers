@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /work/tanzania/
+RewriteRule ^(data)/([a-zA-Z]+)/([0-9]+) main.php?option=$2&id=$3 [NC]
+RewriteRule ^(data)/([a-zA-Z]+) main.php?option=$2 [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+ErrorDocument 400 list/errors.php?q=400
+
+
+ErrorDocument 404 '<link type="text/css" rel="stylesheet" href="css/404.css" />	<div id="error">		<img src="images/logo.png" border="0">	<h1>404 - Page Not Found</h1>	<p>This might be because you typed the web address incorrectly. Please check the address and spelling ensuring that it does <strong>not</strong> contain capital letters or spaces.</p>		<p>It is possible that the page you were looking for may have been moved, updated or deleted.</p>	<p>Please click the back button to try another link.</p>	    <p class="instruction">Or</p>	<ul class="linkList"> 	<li>Visit the <a href="Content" class="errorbold"><b>Site Home Page</b></a>.</li>	</ul></div>
+
+# END WordPress
+</IfModule>

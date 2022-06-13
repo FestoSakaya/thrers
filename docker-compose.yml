@@ -1,0 +1,67 @@
+version: "3.9"
+    
+services:
+  nginx:
+    build: ./nginx/
+    container_name: thrers-nginx
+    links:
+      - db
+    restart: unless-stopped
+    ports:
+      - "9080:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - app-network
+
+  php:
+    build: ./php/
+    container_name: thrers-php
+    restart: unless-stopped
+    expose:
+      - 9000
+    volumes:
+      - ./src:/var/www/html
+    working_dir: /var/www/html
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0.29
+    container_name: thrers-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: tanzania_nrims
+      MYSQL_ROOT_PASSWORD: N1mx@9653
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 'N1mx@9653'
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: unless-stopped
+    ports:
+      - 8085:80
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local

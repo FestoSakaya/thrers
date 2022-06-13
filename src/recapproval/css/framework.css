@@ -1,0 +1,305 @@
+/* ==================================================
+   Reset CSS
+================================================== */
+
+.clearfix,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0},* html .clearfix{height:1%}
+
+/* ==================================================
+   Grid System
+================================================== */
+
+.row
+{
+	width: 100%;
+	
+	width: -moz-calc(100% + 40px);
+	width: -webkit-calc(100% + 40px);
+	width: -o-calc(100% + 40px);
+	width: calc(100% + 40px);
+	
+	margin: 0 -20px;
+}
+
+[class*='dwdgrid-']
+{
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.dwdgrid-1
+{ width: 8.3333333333333%; }
+
+.dwdgrid-2
+{ width: 16.666666666667%; }
+
+.dwdgrid-3
+{ width: 25%; }
+
+.dwdgrid-4
+{ width: 33.333333333333%; }
+
+@media screen and (min-width: 100px) and (max-width: 1000px) {
+.logogrid{background:url(../images/headersmall.png) no-repeat;
+width:332px;
+height:94px;}
+}
+
+@media screen and (min-width: 1001px) and (max-width: 30000px) {
+.logogrid{background:url(../images/header.png) no-repeat;
+width:960px;
+height:100px;}
+}
+
+
+.dwdgrid-5
+{ width: 41.666666666667%; }
+
+.dwdgrid-6
+{ width: 50%; }
+
+.dwdgrid-7
+{ width: 58.333333333333%; }
+
+.dwdgrid-8
+{ width: 66.666666666667%; }
+
+.dwdgrid-9
+{ width: 75%; }
+
+.dwdgrid-10
+{ width: 83.333333333333%; }
+
+.dwdgrid-11
+{ width: 91.666666666667%; }
+
+.dwdgrid-12
+{ width: 100%; }
+
+@media only screen and (max-width: 960px)
+{
+	
+	[class*='dwdgrid-']
+	{
+		width: 100%;
+	}
+
+	[class*='dwdgrid-']:last-of-type
+	{
+		float: right;
+	}
+	
+}
+
+/**
+
+<div class="row clearfix">
+	<div class="dwdgrid-6">
+		<h3>Half Width</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget diam dictum, posuere velit eu, condimentum orci. Sed eget sapien dictum arcu venenatis dignissim. Cras vitae est facilisis tortor vestibulum mollis. Vivamus tempor malesuada dolor, vitae tempus dolor.</p>
+	</div>
+	<div class="dwdgrid-6">
+		<h3>Half Width</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget diam dictum, posuere velit eu, condimentum orci. Sed eget sapien dictum arcu venenatis dignissim. Cras vitae est facilisis tortor vestibulum mollis. Vivamus tempor malesuada dolor, vitae tempus dolor.</p>
+	</div>
+</div>
+
+**/
+
+/* ==================================================
+   Images
+================================================== */
+
+img
+{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	
+	outline: 1px solid transparent;
+}
+
+.imgstyle
+{
+	display: block;
+	width: 100%;
+	max-width: 400px;
+}
+
+	.imgleft
+	{
+		float: left;
+		margin: 0 30px 30px 0;
+	}
+	
+	.imgright
+	{
+		float: right;
+		margin: 0 0 30px 30px;
+	}
+	
+	.imgcentre
+	{
+		float: none;
+		margin: 0 auto 30px auto;
+	}
+
+@media only screen and (max-width: 960px)
+{
+	
+	.imgleft
+	{
+		display: inline-block;
+		float: none;
+		margin: 0 0 30px 0;
+	}
+	
+	.imgright
+	{
+		display: inline-block;
+		float: none;
+		margin: 0 0 30px 0;
+	}
+	
+}
+
+/**
+
+<img class="imgstyle imgleft" src="images/image.jpg" alt="" style="max-width:300px" />
+
+**/
+
+/* ==================================================
+   Buttons
+================================================== */
+
+.button
+{
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 0;
+	width: auto;
+	font-family: inherit;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+	text-align: left;
+	letter-spacing: 0;
+	
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+	.button.fullbutton
+	{
+		width: 100%;
+	}
+	
+		.button.fullbutton span
+		{
+			float: right;
+		}
+	
+		.button:after
+		{
+			content: '';
+			position: absolute;
+			z-index: -1;
+	
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+		}
+
+.button
+{
+	background: #27ae60;
+	color: #FFF !important;
+}
+
+	.button:hover
+	{
+		background: #27ae60;
+		color: #FFF !important;
+	}
+
+		.button:active
+		{
+			background: #27ae60;
+			top: 2px;
+		}
+
+
+.buttonm
+{
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 0;
+	width: auto;
+	font-family: inherit;
+	font-size: 18px;
+	text-transform:none;
+	font-weight: 700;
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+	text-align: left;
+	letter-spacing: 0;
+	
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+	.buttonm.fullbutton
+	{
+		width: 100%;
+	}
+	
+		.buttonm.fullbutton span
+		{
+			float: right;
+		}
+	
+		.buttonm:after
+		{
+			content: '';
+			position: absolute;
+			z-index: -1;
+	
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+		}
+
+.buttonm
+{
+	background: #1877BA;
+	color: #FFF !important;
+	margin-right: 10px;
+}
+
+	.buttonm:hover
+	{
+		background: #27ae60;
+		color: #FFF !important;
+	}
+
+		.buttonm:active
+		{
+			background: #27ae60;
+			top: 2px;
+		}

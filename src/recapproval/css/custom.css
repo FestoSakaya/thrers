@@ -1,0 +1,7 @@
+/* your styles go here */
+.panel{font-size:14px;}
+#quantity,#price_unit1, #price_unit2, #price_unit3, #price_unit4, #total, #quantity1, #total1, #total2, #total3, #total4, #total5, #total6{width:50px;}
+
+#quantity2,#quantity3, #quantity4, #quantity5, #quantity6, #price_unit5, #price_unit6,#price_unit{width:50px;}
+
+.fontx{font-size:16px!important; color:#CC0000; font-weight:bold;}

@@ -1,9 +1,9 @@
 <?php
 error_reporting(1);
-$hostm   = "localhost";
-$dbm = "nrims_tanzania";//
-$usrm   = "admin";////uccdbadmin
-$pwdm   = "N1mx@9653";//lZxDRJm
+$hostm   = "db";
+$dbm = "nrims_tanzania";
+$usrm   = "admin";
+$pwdm   = "N1mx@9653";
 //object oriented style (recommended)
 $mysqli = new mysqli($hostm,$usrm,$pwdm,$dbm);
 //Output any connection error
@@ -37,8 +37,8 @@ $todayfull=date("l jS \of F Y h:i:s A");
 ////////////////////Get Base URL Link/////////////////////
 
 if ($_SERVER['HTTP_HOST'] == "localhost") {
-    $base_url = 'http://localhost/work/tanzania/recapproval/';
-	$logoutlink='http://localhost/work/tanzania/';//NOTE: Dont include recapproval/ here
+    $base_url = 'http://localhost/tanzania/recapproval/';
+	$logoutlink='http://localhost/tanzania/';//NOTE: Dont include recapproval/ here
 } 
 if ($_SERVER['HTTP_HOST'] == "www.example.com") {
     $base_url = 'https://www.example.com/recapproval/';

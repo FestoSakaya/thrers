@@ -1,10 +1,9 @@
 <?php
 error_reporting(1);
-$hostm   = "localhost";
-#$hostm   = "196.43.185.62";
+$hostm   = "db";
 $dbm = "nrims_tanzania";//
-$usrm   = "root";////uccdbadmin
-$pwdm   = "";//lZxDRJm
+$usrm   = "admin";////uccdbadmin
+$pwdm   = "N1mx@9653";//lZxDRJm
 //object oriented style (recommended)
 $mysqli = new mysqli($hostm,$usrm,$pwdm,$dbm);
 //Output any connection error
@@ -18,7 +17,7 @@ $prefix="apvr_";
 $siteshortname="REC Approval";
 ///////////////////key words//////////////////
 if ($_SERVER['HTTP_HOST'] == "localhost") {
-    $base_url = 'http://localhost/work/tanzania/';
+    $base_url = 'http://localhost/tanzania/';
 } 
 if ($_SERVER['HTTP_HOST'] == "www.example.com") {
     $base_url = 'https://www.example.com/';
@@ -31,7 +30,7 @@ if ($_SERVER['HTTP_HOST'] == "example.com") {
     $base_url = 'https://www.example.com/';
 }
 
-$usmtpportNo="465"; // 587 SMTP Port
+$usmtpportNo="587"; // 465 SMTP Port
 $usmtpHost="smtp.gmail.com";
 
 //Office 365

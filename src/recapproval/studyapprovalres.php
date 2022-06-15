@@ -1,6 +1,6 @@
 <?php
 require_once('TCPDF/tcpdf.php');
-$hostm   = "localhost";
+$hostm   = "db";
 $dbm = "c1nrims_recapprovals";
 $usrm   = "c1nrimsrm";
 $pwdm   = "xgfkbGNPWZ!4";

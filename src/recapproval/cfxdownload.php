@@ -1,7 +1,7 @@
 <?php 
 echo $id;
 session_start();
-$hostm   = "localhost";
+$hostm   = "db";
 $dbm = "c1nrims_recapprovals";//eacint_rptsdbnew
 $usrm   = "c1nrimsrm";
 $pwdm   = "xgfkbGNPWZ!4";

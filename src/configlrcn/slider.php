@@ -1,5 +1,5 @@
       <?php
-      $sqlUser3 = "SELECT * FROM ".$prefix."web_slider order by rank asc limit 0,4";
+      $sqlUser3 = "SELECT * FROM nrims_tanzania.apvr_web_slider";
 		$queryUser3 = $mysqli->query($sqlUser3);
         $totalUser3 = $queryUser3->num_rows;
         while($r3 = $queryUser3->fetch_array()){?>

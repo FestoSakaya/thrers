@@ -61,6 +61,26 @@ services:
     networks:
       - thrers-network
 
+  ftp:
+    image: stilliard/pure-ftpd:latest
+    container_name: ftpd-server
+    restart: unless-stopped
+    environment:
+      PUBLICHOST: "localhost"
+      FTP_USER_NAME: admin
+      FTP_USER_PASS: 'N1mx@9653'
+      FTP_USER_HOME: "/var/www"
+      FTP_USER_UID: 33
+      FTP_USER_GID: 33
+    volumes: 
+        - ./src:/var/www
+        - ./src/pure-ftpd:/etc/pure-ftpd/passwd
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
+    networks:
+      - thrers-network
+
 networks:
   thrers-network:
     driver: bridge

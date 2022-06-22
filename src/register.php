@@ -317,6 +317,7 @@ $sqlA2="insert into ".$prefix."user (`country_id`,`created`,`updated`,`email`,`p
 values('$country_id',now(),now(),'$email','$password','$username','0','$dbfirstname','$institution','','0','investigator','$newname','','','$activ_code','$fname','$rstug_middle_name','$surname','$rstug_nin_passport','$titleName','$rstug_placeofbirth','$rstug_district','$phone','$idtype','','new')";
 $mysqli->query($sqlA2);
 
+
 $md5_id = $mysqli->insert_id;
 $md5_idmm = md5($mysqli->insert_id);
 
@@ -341,13 +342,13 @@ $mail->SMTPSecure = 'tls';
 $mail->SMTPDebug = 0;
 
 
-$mail->Username = "uncstuncstapps@gmail.com"; // SMTP username -- CHANGE --
-$mail->Password = "lpupvbvillxraaey"; // SMTP password -- CHANGE --
-$mail->setFrom("uncstuncstapps@gmail.com", "Admin");
+$mail->Username = "nimrhqs.noreply@gmail.com"; // SMTP username -- CHANGE --
+$mail->Password = "uvjk mhfb fqop prfy"; // SMTP password -- CHANGE --
+$mail->setFrom("nimrhqs.noreply@gmail.com", "Admin");
 /////////////////////////////Begin Mail Body
 
 //$mail->addCc('mawandammoses@yahoo.com','Activation Link from NRIMS');////
-$mail->addBcc('uncstuncstapps@gmail.com','Activation Link from NRIMS');//
+$mail->addBcc('nimrhqs.noreply@gmail.com','Activation Link from NRIMS');//
 
 $mail->FromName = "Activation Link from NRIMS"; //From Name -- CHANGE --
 $mail->AddAddress($email, $dbfirstname); //To Address -- CHANGE --
